@@ -13,8 +13,14 @@ def main():
     frame_rate = 60
     running = True
 
+    # Groups
+    updatable = pygame.sprite.Group()
+    drawable = pygame.sprite.Group()
+    Player.containers = (updatable, drawable)
+
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, PLAYER_RADIUS)
 
+    # Game Loop
     while running:
         log_state()
 
@@ -24,9 +30,13 @@ def main():
                 return
 
         screen.fill("black")
-        player.draw(screen)
-        player.update(delta_time)
+
+        updatable.update(delta_time)
+        for obj in drawable:
+            obj.draw(screen)
+
         pygame.display.flip()
+
         delta_time = clock.tick(frame_rate) / 1000
 
 
