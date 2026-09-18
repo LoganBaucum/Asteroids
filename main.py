@@ -43,7 +43,7 @@ def main():
 
         for asteroid in asteroids:
             if asteroid.collides_with(player):
-                log_event("player hit")
+                log_event("player_hit")
                 print("Game over!")
                 running == False
                 return
