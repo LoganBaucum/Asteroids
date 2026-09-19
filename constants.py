@@ -1,7 +1,8 @@
 # Display settings
-SCREEN_WIDTH = 1280
-SCREEN_HEIGHT = 720
+SCREEN_WIDTH = 1920
+SCREEN_HEIGHT = 1080
 
+# Graphics settings
 LINE_WIDTH = 2
 
 # Player settings
