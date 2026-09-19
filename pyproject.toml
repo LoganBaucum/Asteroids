@@ -9,5 +9,6 @@ dependencies = [
 ]
 
 [tool.basedpyright]
+typeCheckingMode = "basic" # Options: "off", "basic", "strict"
 venvPath = "."
 venv = ".venv"
